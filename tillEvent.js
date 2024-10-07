@@ -2,7 +2,7 @@ const assert          = require('node:assert');
 const NodeEvents      = require('node:events');
 const ExtendedPromise = require('hkey-extended-promise'); //const ExtendedPromise  = require('../extended-promise/ExtendedPromise.js');
 
-function till(emitters, events, opts={}){
+function tillEvent(emitters, events, opts={}){
 	emitters = Array.isArray(emitters)   ? emitters       : [emitters];
     events   = Array.isArray(events)     ? events         : [events];	 
     opts     = typeof(opts)==='function' ? {filter: opts} : (
@@ -96,4 +96,4 @@ function till(emitters, events, opts={}){
 	}
 	return promise;
 }
-module.exports  = till;
+module.exports  = tillEvent;
