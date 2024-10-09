@@ -40,7 +40,7 @@ const {event, args} = await tillEvent([emitter1, emitter2, ...], [eventName1, ev
 
 ### timeout
 ```js
-const {    tillEvent, TimeoutError } = require('till-event'); 
+const { tillEvent, TimeoutError } = require('till-event'); 
 ...
 try{
     await tillEvent(emitter, eventName, {timeout: msTillReject});
