@@ -34,7 +34,7 @@ Node events to promises
 	
 	await tillEvent(socket, ['open', 'error', 'close'], {
 		timeout : 10000, //10 seconds
-		filter  : function(result, promise){
+		filter  : function(promise, result){
 			const {event, args} = result;
 			if(event === 'open'){
 				return socket;
