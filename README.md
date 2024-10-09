@@ -81,7 +81,7 @@ await tillEvent(emitter, eventName, {
 ```    
 
 ## Example wait till WebSocket open
-    * resolve when on WebSocket open event
+    * resolve on open event
     * reject 
         - if not open in 10 seconds
         - on close event
@@ -116,6 +116,7 @@ function createOpenedWebSocket(url){
 Extension of Node.js EventEmitter ('node:events');
 
 new methods: 
+
     * tillEvent(eventNames, opts={})
     * tillEventOrWas(eventNames, opts={}) if event already was it will resolvs imidiatly 
     * emitOnce(eventNamem, ...args) if event already was it will ignored
