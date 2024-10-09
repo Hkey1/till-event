@@ -1,5 +1,12 @@
 # till-event
-Node events to promises to await till event;
+Node.js events to promises converter. 
+
+
+```js
+	await tillEvent(socket, 'open')
+```
+
+
 
 ## Install
 ```
@@ -29,7 +36,6 @@ OR
 ```js
 const {event, args} = await tillEvent([emitter1, emitter2, ...], [eventName1, eventName2, ...]);
 ```
-
 
 
 ### timeout
@@ -118,8 +124,8 @@ Extension of Node.js EventEmitter ('node:events');
 new methods: 
 
     * tillEvent(eventNames, opts={})
-    * tillEventOrWas(eventNames, opts={}) if event already was it will resolvs imidiatly 
-    * emitOnce(eventNamem, ...args) if event already was it will ignored
+    * tillEventOrWas(eventNames, opts={}) if event already was promise will be resolve in next tick 
+    * emitOnce(eventName, ...args) if event already was it will ignored
     * emitter.getLastEvent(eventNames) return last event 
     * emitter.getLastEventTimestamp(eventNames) return last event timestamp
     
