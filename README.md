@@ -3,7 +3,7 @@ Node.js events to promises converter.
 
 
 ```js
-	await tillEvent(socket, 'open')
+await tillEvent(socket, 'open')
 ```
 
 
