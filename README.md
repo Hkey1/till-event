@@ -37,6 +37,18 @@ OR
 const {event, args} = await tillEvent([emitter1, emitter2, ...], [eventName1, eventName2, ...]);
 ```
 
+### Example
+
+```js
+const tillEvent    = require('till-event'); 
+const EventEmitter = require('node:events'); 
+
+const emitter = new EventEmitter();
+
+setTimeout(()=>emitter.emit('init'), 1000);
+
+await tillEvent(emitter, 'init');
+```
 
 ### timeout
 ```js
