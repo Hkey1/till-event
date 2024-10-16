@@ -24,7 +24,6 @@ function tillEvent(emitters, events, opts={}){
 		assert(event.length!==0);
 	});
 	
-
 	const was = {};
 	events.forEach(event=>{
 		if(typeof(event)!=='string'){
@@ -71,10 +70,8 @@ function tillEvent(emitters, events, opts={}){
 				return;
 			}
 			if(filterRes===undefined || filterRes===false){
-				//console.log({filterRes})
 				return;
 			}
-			//console.log('resolve', {filterRes})
 			promise.resolve(filterRes);
 		} else {
 			promise.resolve(result);
