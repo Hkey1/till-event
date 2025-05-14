@@ -29,11 +29,11 @@ class Emitter extends NodeEvents{
 		}
 	}
 	getLastEvent(...events){
-		events = Array.isArray(events[0]) ? events[0] : events;
-		let last   = undefined;
+		events   = Array.isArray(events[0]) ? events[0] : events;
+		let last = undefined;
 		events.forEach(eventName=>{
 			const details = this.__lastEvents[eventName];
-			if(!last || details.timestamp > last.timestamp){
+			if(!last || (details && details.timestamp > last.timestamp)){
 				last  = details;
 			}
 		});
